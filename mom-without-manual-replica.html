@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Authentic stories from the motherhood journey. Join the community, explore content, and connect with real parenting moments.">
+    <meta name="keywords" content="motherhood, parenting, mom blogger, authentic content, baby boy">
+    <meta property="og:title" content="Sumedha | Mom Without A Manual">
+    <meta property="og:description" content="Authentic stories from the motherhood journey">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="Sumedha | Mom Without A Manual">
+    <meta property="twitter:description" content="Authentic stories from the motherhood journey">
+    <title>Sumedha | Mom Without A Manual</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 2rem 4rem;
+            max-width: 100%;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .header-left h1 {
+            font-size: 1.125rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .header-left p {
+            font-size: 0.875rem;
+            color: #999;
+            font-weight: 400;
+        }
+
+        .header-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .header-social a {
+            color: #1a1a1a;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid #d5d5d5;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+
+        .header-social a:hover {
+            border-color: #1a1a1a;
+            background: #f5f5f5;
+        }
+
+        .header-social svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .header-social a.youtube svg {
+            fill: currentColor;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 4rem;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .hero-subtitle {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: #888;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 5.5rem;
+            font-weight: 400;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-description {
+            font-size: 1.0625rem;
+            color: #888;
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2.5rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid;
+            letter-spacing: 0px;
+        }
+
+        .btn-primary {
+            background: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+        }
+
+        .btn-primary:hover {
+            background: #333;
+            border-color: #333;
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            color: #1a1a1a;
+            border-color: #1a1a1a;
+        }
+
+        .btn-secondary:hover {
+            background: #f5f5f5;
+        }
+
+        /* Journey Section */
+        .journey {
+            padding: 6rem 4rem;
+            background: #ffffff;
+        }
+
+        .journey-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .journey-title {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .journey-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .journey-text p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            font-size: 0.95rem;
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 0.25rem;
+            width: fit-content;
+            font-weight: 400;
+        }
+
+        .journey-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem;
+            text-align: center;
+            background: #fafafa;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content h3 {
+            font-size: 1.125rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-content > p {
+            font-size: 0.875rem;
+            color: #999;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-social a {
+            color: #1a1a1a;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid #d5d5d5;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+
+        .footer-social a:hover {
+            border-color: #1a1a1a;
+            background: #f5f5f5;
+        }
+
+        .footer-social svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .footer-social a.youtube svg {
+            fill: currentColor;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #ddd;
+            margin: 1.5rem 0;
+        }
+
+        .footer-copyright {
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        /* Support Section */
+        .support-section {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .support-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .support-title {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .support-description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .payment-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1a1a1a;
+        }
+
+        .payment-button {
+            width: 100%;
+            padding: 0.9rem;
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .payment-button:hover {
+            background: #333;
+        }
+
+        .payment-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .amount-display {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .payment-message {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: none;
+            font-size: 0.9rem;
+        }
+
+        .payment-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .payment-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem 2rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 4rem 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-subtitle {
+                margin-bottom: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .journey {
+                padding: 3rem 2rem;
+            }
+
+            .journey-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            footer {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <h1>Mom Without A Manual</h1>
+            <p>Real motherhood stories, unfiltered.</p>
+        </div>
+        <div class="header-social">
+            <a href="https://www.instagram.com/momwithoutamanuall/" target="_blank" title="Instagram">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="3" width="18" height="18" rx="3" fill="none"/>
+                    <circle cx="12" cy="12" r="4" fill="none"/>
+                    <circle cx="16.5" cy="7.5" r="1" fill="currentColor"/>
+                </svg>
+            </a>
+            <a href="https://www.youtube.com/@momwithoutamanuall" target="_blank" title="YouTube" class="youtube">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4C7.6 4 4 7.6 4 12s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8z" fill="none"/>
+                    <polygon points="10.5 15 15.5 12 10.5 9" fill="currentColor"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <p class="hero-subtitle">Finding my rhythm</p>
+        <h1>Mom Without A Manual</h1>
+        <p class="hero-description">Entering a new phase of life. Learning, unlearning, and finding myself again as a mother. Real stories. Authentic moments.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn My Story</button>
+            <button class="btn btn-secondary" onclick="document.getElementById('collab').scrollIntoView({behavior:'smooth'})">Collaborate</button>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey" id="about">
+        <div class="journey-container">
+            <div class="journey-text">
+                <h2 class="journey-title">My Journey</h2>
+                <h3 class="journey-subtitle">The old me meets the new me</h3>
+                <p>Entering into this altogether new phase of life—motherhood—I realized there's a lot to learn, a lot to unlearn. This chapter feels different.</p>
+                <p>I'm now finding my rhythm again, as the mother of a baby boy, for whom I'm his entire world. Through Instagram and YouTube, I share real moments—not the filtered version, but the authentic journey of motherhood.</p>
+                <p>This space is for everyone navigating motherhood, finding themselves, and celebrating the beautiful mess of it all. No manual needed—just real conversations and shared experiences.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/momwithoutamanuall/" target="_blank">→ Instagram</a>
+                    <a href="https://www.youtube.com/@momwithoutamanuall" target="_blank">→ YouTube</a>
+                </div>
+            </div>
+            <div class="journey-image">
+                <img src="https://v0-personal-website-creation-gamma-khaki.vercel.app/images/img-8623-original.jpg" alt="Mom Without A Manual">
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section" id="support">
+        <div class="support-content">
+            <h2 class="support-title">Support Our Journey</h2>
+            <p class="support-description">Love our content? Support us to continue creating authentic stories and real motherhood moments.</p>
+
+            <div class="payment-form">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 XXXXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount (in ₹) *</label>
+                    <select id="amount" required>
+                        <option value="">Select an amount</option>
+                        <option value="10000">₹100</option>
+                        <option value="25000">₹250</option>
+                        <option value="50000">₹500</option>
+                        <option value="100000">₹1,000</option>
+                        <option value="custom">Custom Amount</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="custom-amount-group" style="display: none;">
+                    <label for="custom-amount">Enter Custom Amount (in ₹)</label>
+                    <input type="number" id="custom-amount" placeholder="Enter amount" min="1">
+                </div>
+
+                <button class="payment-button" id="pay-button">Pay Now</button>
+                <div class="amount-display" id="amount-display"></div>
+                <div class="payment-message" id="payment-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="collab">
+        <div class="footer-content">
+            <h3>Mom Without A Manual</h3>
+            <p>Real motherhood stories, unfiltered.</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/momwithoutamanuall/" target="_blank" title="Instagram">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="3" width="18" height="18" rx="3" fill="none"/>
+                        <circle cx="12" cy="12" r="4" fill="none"/>
+                        <circle cx="16.5" cy="7.5" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@momwithoutamanuall" target="_blank" title="YouTube" class="youtube">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4C7.6 4 4 7.6 4 12s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8z" fill="none"/>
+                        <polygon points="10.5 15 15.5 12 10.5 9" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">© 2025 Sumedha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Razorpay Checkout Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script>
+        const RAZORPAY_KEY_ID = 'rzp_test_T9SssIp5818KVK';
+
+        const amountSelect = document.getElementById('amount');
+        const customAmountInput = document.getElementById('custom-amount');
+        const customAmountGroup = document.getElementById('custom-amount-group');
+        const payButton = document.getElementById('pay-button');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const amountDisplay = document.getElementById('amount-display');
+        const paymentMessage = document.getElementById('payment-message');
+
+        // Handle custom amount visibility
+        amountSelect.addEventListener('change', function() {
+            if (this.value === 'custom') {
+                customAmountGroup.style.display = 'block';
+                customAmountInput.focus();
+            } else {
+                customAmountGroup.style.display = 'none';
+            }
+            updateAmountDisplay();
+        });
+
+        customAmountInput.addEventListener('input', updateAmountDisplay);
+
+        function getAmountInPaise() {
+            if (amountSelect.value === 'custom') {
+                const customAmount = parseInt(customAmountInput.value) || 0;
+                return customAmount * 100; // Convert to paise
+            }
+            return parseInt(amountSelect.value) || 0;
+        }
+
+        function getAmountInRupees() {
+            return getAmountInPaise() / 100;
+        }
+
+        function updateAmountDisplay() {
+            const amount = getAmountInRupees();
+            if (amount > 0) {
+                amountDisplay.textContent = `Amount to pay: ₹${amount.toFixed(2)}`;
+            } else {
+                amountDisplay.textContent = '';
+            }
+        }
+
+        payButton.addEventListener('click', handlePayment);
+
+        async function handlePayment() {
+            const email = emailInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const amount = getAmountInPaise();
+
+            // Validation
+            if (!email) {
+                showError('Email is required');
+                return;
+            }
+
+            if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                showError('Please enter a valid email');
+                return;
+            }
+
+            if (amount < 100) {
+                showError('Amount must be at least ₹1');
+                return;
+            }
+
+            if (amount > 10000000) {
+                showError('Amount cannot exceed ₹100,000');
+                return;
+            }
+
+            // Disable button during processing
+            payButton.disabled = true;
+            payButton.textContent = 'Creating order...';
+
+            try {
+                // Step 1: Create order
+                const orderResponse = await fetch('/.netlify/functions/create-order', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        amount: amount,
+                        description: 'Support Mom Without A Manual',
+                        email: email,
+                        phone: phone,
+                    }),
+                });
+
+                if (!orderResponse.ok) {
+                    const errorData = await orderResponse.json();
+                    throw new Error(errorData.error || 'Failed to create order');
+                }
+
+                const orderData = await orderResponse.json();
+
+                if (!orderData.success || !orderData.orderId) {
+                    throw new Error('Invalid order response');
+                }
+
+                // Step 2: Open Razorpay checkout
+                openCheckout(orderData.orderId, amount, email, phone);
+            } catch (error) {
+                showError(error.message || 'Failed to process payment');
+                payButton.disabled = false;
+                payButton.textContent = 'Pay Now';
+            }
+        }
+
+        function openCheckout(orderId, amount, email, phone) {
+            const options = {
+                key: RAZORPAY_KEY_ID,
+                order_id: orderId,
+                amount: amount,
+                currency: 'INR',
+                name: 'Mom Without A Manual',
+                description: 'Support our journey',
+                prefill: {
+                    email: email,
+                    contact: phone,
+                },
+                theme: {
+                    color: '#1a1a1a',
+                },
+                handler: function (response) {
+                    verifyPayment(response);
+                },
+                modal: {
+                    ondismiss: function () {
+                        payButton.disabled = false;
+                        payButton.textContent = 'Pay Now';
+                        showError('Payment cancelled. Please try again.');
+                    },
+                },
+            };
+
+            const rzp = new Razorpay(options);
+            rzp.open();
+        }
+
+        async function verifyPayment(paymentResponse) {
+            payButton.disabled = true;
+            payButton.textContent = 'Verifying payment...';
+
+            try {
+                const verifyResponse = await fetch('/.netlify/functions/verify-payment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        razorpay_payment_id: paymentResponse.razorpay_payment_id,
+                        razorpay_order_id: paymentResponse.razorpay_order_id,
+                        razorpay_signature: paymentResponse.razorpay_signature,
+                    }),
+                });
+
+                const verifyData = await verifyResponse.json();
+
+                if (!verifyResponse.ok) {
+                    throw new Error(verifyData.error || 'Payment verification failed');
+                }
+
+                // Payment successful
+                showSuccess(`Payment successful! Thank you for your support. Payment ID: ${paymentResponse.razorpay_payment_id}`);
+
+                // Reset form
+                setTimeout(() => {
+                    emailInput.value = '';
+                    phoneInput.value = '';
+                    amountSelect.value = '';
+                    customAmountInput.value = '';
+                    customAmountGroup.style.display = 'none';
+                    amountDisplay.textContent = '';
+                    payButton.disabled = false;
+                    payButton.textContent = 'Pay Now';
+                }, 3000);
+            } catch (error) {
+                showError(error.message || 'Payment verification failed');
+                payButton.disabled = false;
+                payButton.textContent = 'Pay Now';
+            }
+        }
+
+        function showSuccess(message) {
+            paymentMessage.className = 'payment-message success';
+            paymentMessage.textContent = message;
+        }
+
+        function showError(message) {
+            paymentMessage.className = 'payment-message error';
+            paymentMessage.textContent = '❌ ' + message;
+        }
+    </script>
+</body>
+</html>

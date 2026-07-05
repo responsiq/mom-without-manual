@@ -1,0 +1,11 @@
+{
+  "name": "mom-without-manual",
+  "version": "1.0.0",
+  "description": "Mom Without A Manual - Personal website with Razorpay payments",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "razorpay": "^2.9.2"
+  }
+}
